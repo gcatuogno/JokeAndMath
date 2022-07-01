@@ -12,6 +12,8 @@ class Config(object):
 
     # Silence the deprecation warning
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    # ApiScec Config.
     APISPEC_SPEC = APISpec(
         title='JokeAndMath',
         version='v1',

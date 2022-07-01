@@ -11,8 +11,10 @@ from flask_apispec.extension import FlaskApiSpec
 # import db
 import dbPostgress as db
 
+# Import Config.
 from config import get_config
 
+# Flask ApiSpec Imports.
 from docs import initialize_docs
 
 # Imports Routes.
