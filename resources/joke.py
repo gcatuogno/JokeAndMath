@@ -6,6 +6,8 @@ from flask_restful import Resource
 from services.joke_conect import random_joke
 from services.joke_conect import joke_select
 
+from flask_apispec.views import MethodResource
+
 # Data Base Imports
 # ? Uncomment dbSQLite to use this data base and comment the other.
 import dbPostgress as db
@@ -15,7 +17,7 @@ import dbPostgress as db
 from models.joke_model import Joke_model
 
 
-class Joke(Resource):
+class Joke(MethodResource, Resource):
     """Joke Class.
     This Class is use to return a specific joke.    
     """
@@ -32,7 +34,7 @@ class Joke(Resource):
         return joke_select(joke_type)
 
 
-class JokeList(Resource):
+class JokeList(MethodResource, Resource):
     """Joke List
         This Class contains the methods, 
         -Random Joke.

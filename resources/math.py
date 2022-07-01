@@ -5,8 +5,10 @@ from flask_restful import Resource
 # Fuction Imports
 from MathFuction.Fuctions import mcm, sum
 
+from flask_apispec.views import MethodResource
 
-class Math(Resource):
+
+class Math(MethodResource, Resource):
     """Class Math.
         In this Class are define all mathematical methods.
 
