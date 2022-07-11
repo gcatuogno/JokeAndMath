@@ -36,8 +36,11 @@ def random_joke():
     Returns:
         str: Random Joke
     """
-    joke_list = [chuck_joke(), dad_joke()]
-    return random.choice(joke_list)
+    joke_type = random.choice(["chuck_joke", "dad_joke"])
+    if joke_type == "chuck_joke":
+        return chuck_joke()
+    if joke_type == "dad_joke":
+        return dad_joke()
 
 
 def chuck_joke():
